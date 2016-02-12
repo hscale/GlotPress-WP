@@ -215,7 +215,7 @@ table.permissions thead th {
 	width: 20%;
 }
 table.projects thead th {
-	width: 80%;
+	width: 25%;
 }
 table.translations tr, table.translation-sets tr, table.glossary tr, table.locale-sub-projects, table.permissions, table.projects {
 	border: 0;

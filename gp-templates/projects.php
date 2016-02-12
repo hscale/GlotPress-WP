@@ -10,6 +10,8 @@ gp_tmpl_header();
 		<thead>
 			<tr>
 				<th><?php _e( 'Name', 'glotpress' ); ?></th>
+				<th><?php _e( 'Description', 'glotpress' ); ?></th>
+				<th><?php _e( 'Active', 'glotpress' ); ?></th>
 				<th>&mdash;</th>
 			</tr>
 		</thead>
@@ -17,6 +19,8 @@ gp_tmpl_header();
 		<?php foreach ( $projects as $project ): ?>
 			<tr>
 				<td><?php gp_link_project( $project, esc_html( $project->name ) ); ?></td>
+				<td><?php echo $project->description; ?></td>
+				<td><?php if ( $project->active ) { _e( 'Yes', 'glotpress' ); }?></td>
 				<td><?php gp_link_project_edit( $project ); ?></td>
 		<?php endforeach; ?>
 	</table>	
