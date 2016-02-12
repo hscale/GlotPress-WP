@@ -17,7 +17,7 @@ gp_tmpl_header();
 		<?php foreach ( $projects as $project ): ?>
 			<tr>
 				<td><?php gp_link_project( $project, esc_html( $project->name ) ); ?></td>
-				<td><?php gp_link_project_edit( $project, null, array( 'class' => 'bubble' ) ); ?></td>
+				<td><?php gp_link_project_edit( $project ); ?></td>
 		<?php endforeach; ?>
 	</table>	
 
