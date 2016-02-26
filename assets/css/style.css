@@ -217,7 +217,10 @@ table.permissions thead th {
 table.projects thead th {
 	width: 25%;
 }
-table.projects, table.permissions tr:nth-child(even) {  
+table.projects tr:nth-child(even) {  
+	background-color: #eeeeee;
+}
+table.permissions tr:nth-child(even) {
 	background-color: #eeeeee;
 }
 table.translations tr, table.translation-sets tr, table.glossary tr, table.locale-sub-projects, table.permissions, table.projects {
