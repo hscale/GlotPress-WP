@@ -32,7 +32,7 @@ gp_tmpl_header();
 				<td><?php echo esc_html( $permission->action ); ?></td>
 				<td><?php echo esc_html( $permission->locale_slug ); ?></td>
 				<td><?php echo esc_html( $permission->set_slug ); ?></td>
-				<td><a href="<?php echo gp_url_join( gp_url_current(), '-delete/'.$permission->id ); ?>" class="action delete"><?php _e( 'Remove', 'glotpress' ); ?></a></td>
+				<td><a href="<?php echo gp_url_join( gp_url_current(), '-delete/'.$permission->id ); ?>" class="action delete"><?php _e( 'Delete', 'glotpress' ); ?></a></td>
 			</tr>
 	<?php endforeach; ?>
 	</table>	
