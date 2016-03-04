@@ -189,7 +189,12 @@ textarea {
 	line-height: 1.5em;
 	width: 40em;
 }
-table.translations, table.translation-sets, table.glossary, table.locale-sub-projects, table.permissions, table.projects {
+table.translations,
+table.translation-sets,
+table.glossary,
+table.locale-sub-projects,
+table.permissions,
+table.projects {
 	font-size: 90%;
 	width: 100%;
 	border-spacing: 0.1em;
@@ -223,7 +228,12 @@ table.projects tr:nth-child(even) {
 table.permissions tr:nth-child(even) {
 	background-color: #eeeeee;
 }
-table.translations tr, table.translation-sets tr, table.glossary tr, table.locale-sub-projects, table.permissions, table.projects {
+table.translations tr,
+table.translation-sets tr,
+table.glossary tr,
+table.locale-sub-projects,
+table.permissions,
+table.projects {
 	border: 0;
 }
 table.translations td.translation ul {
