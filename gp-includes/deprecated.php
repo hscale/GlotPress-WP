@@ -8,8 +8,10 @@
  *
  * @param mixed $value
  */
-function returner( $value ) {
-	return create_function( '', 'return '.var_export( $value, true ).';');
+if ( ! function_exists( 'returner' ) ) {
+	function returner( $value ) {
+		return create_function( '', 'return ' . var_export( $value, true ) . ';' );
+	}
 }
 
 /**
@@ -17,8 +19,10 @@ function returner( $value ) {
  *
  * @param mixed $value
  */
-function echoer( $value ) {
-	return create_function( '', 'echo '.var_export( $value, true ).';');
+if ( ! function_exists( 'echoer' ) ) {
+	function echoer( $value ) {
+		return create_function( '', 'echo ' . var_export( $value, true ) . ';' );
+	}
 }
 
 /**
@@ -32,9 +36,12 @@ function echoer( $value ) {
  * @param string $expression String with an expression -- the result of the function
  * @param array $locals The items in this array will be extracted in the function as local variables.
  */
-function lambda( $args, $expression, $locals = array() ) {
-	$export_call = $locals? 'extract('.var_export( $locals, true ).', EXTR_PREFIX_SAME, "ext");' : '';
-	return create_function( $args, $export_call.' return ('.rtrim( $expression, '; ' ).');' );
+if ( ! function_exists( 'lambda' ) ) {
+	function lambda( $args, $expression, $locals = array() ) {
+		$export_call = $locals ? 'extract(' . var_export( $locals, true ) . ', EXTR_PREFIX_SAME, "ext");' : '';
+
+		return create_function( $args, $export_call . ' return (' . rtrim( $expression, '; ' ) . ');' );
+	}
 }
 
 /**
