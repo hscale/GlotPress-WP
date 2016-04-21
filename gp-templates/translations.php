@@ -25,6 +25,13 @@ $i = 0;
 		<?php echo gp_link_get( gp_url( '/glossaries/-new', array( 'translation_set_id' => $translation_set->id ) ), __( 'Create Glossary', 'glotpress' ), array('class'=>'glossary-link') ); ?>
 	<?php endif; ?>
 </h2>
+
+<?php
+// WPCOM
+do_action( 'gp_translation_view_message', $translation_set, $project );
+// end WPCOM
+?>
+
 <?php if ( $can_approve ): ?>
 <form id="bulk-actions-toolbar" class="filters-toolbar bulk-actions" action="<?php echo $bulk_action; ?>" method="post">
 	<div>
